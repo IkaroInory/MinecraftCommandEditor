@@ -1,0 +1,241 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../../img/wiki icon.png">
+    <title>Guide - Minecraft Command Editor Wiki</title>
+    <meta name="description" content="Minecraft Command Editor Wiki">
+    <meta name="author" content="IkaroInory">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/foundation.min.css">
+    <link rel="stylesheet" href="../../css/foundation-icons.css" />
+    <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/foundation.min.js"></script>
+    <script type="text/javascript" src="../../js/modernizr.js"></script>
+    <script type="text/javascript" src="../../js/nowTime.js"></script>
+</head>
+
+<body onload="showTime()">
+    <!-- 初始化 Foundation JS -->
+    <script>
+        $(document).ready(function () {
+            $(document).foundation();
+        })
+    </script>
+
+    <div class="fixed">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="">Minecraft Command Editor Wiki</a></h1>
+                </li>
+                <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
+                如果需要只显示图片，可以删除 "Menu" 文本 -->
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li data-magellan-arrival="home"><a id="home" href="#"><i class="fi-home"></i>&nbsp;Home</a></li>
+                    <li class="active" data-magellan-arrival="guide"><a id="guide" href="#"><i class="fi-flag"></i>&nbsp;Guide</a></li>
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="giveitems"><a id="giveitems" href="#">Give Items</a></li>
+                    <li data-magellan-arrival="statuseffect"><a id="statuseffect" href="#">Status Effect</a></li>
+                </ul>
+                <ul class="right">
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="lang" class="has-dropdown">
+                        <a href=""><i class="fa fa-globe"></i>&nbsp;Language</a>
+                        <ul class="dropdown">
+                            <li data-magellan-arrival="zh-cn"><a id="zh-cn" href="#">简体中文</a></li>
+                            <li data-magellan-arrival="zh-tw"><a id="zh-tw" href="#">繁體中文</a></li>
+                            <li class="active" data-magellan-arrival="en-us"><a id="en-us" href="#">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+
+    <!--导航链接-->
+    <script language="javascript" type="text/javascript">
+        document.getElementById("home").onclick = function () {
+            window.location.href = "wiki.html";
+        }
+        document.getElementById("guide").onclick = function () {
+            window.location.href = "wiki-guide.html";
+        }
+        document.getElementById("giveitems").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+        document.getElementById("statuseffect").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+
+        document.getElementById("zh-cn").onclick = function () {
+            window.location.href = "../zh-cn/wiki-guide.html";
+        }
+        document.getElementById("zh-tw").onclick = function () {
+            window.location.href = "../zh-tw/wiki-guide.html";
+        }
+        document.getElementById("en-us").onclick = function () {
+            window.location.href = "../en-us/wiki-guide.html";
+        }
+    </script>
+
+    <div style="padding:20px">
+        <p style="font-size:32px;font-weight:700">Guide - Minecraft Command Editor Wiki</p>
+        <hr />
+        <div>
+            <p style="font-size:24px;font-weight:700">I. System Requirements</p>
+            <span>Please use Minecraft Command Editor on <b>Windows 10</b> as much as possible to ensure that Minecraft Command Editor can achieve maximum performance.</span>
+            <p style="font-size:20px;font-weight:700">1.1 Support Library</p>
+            <ul style="list-style-type:none">
+                <li><span>When you use Minecraft Command Editor, you may need the following support libraries:</span></li>
+                <!--Support Lib List-->
+                <li>
+                    <ul style="list-style-type:disc">
+                        <li>Microsoft .NET Framework 4.6.1 or later</li>
+                        <li>Microsoft.ACE.OLEDB.12.0</li>
+                    </ul>
+                </li>
+                <li><span>Be sure to check that your computer has the above support libraries installed. If not, please complete the installation through the <b>1.2 Installation Help</b> boot.</span></li>
+            </ul>
+            <p style="font-size:20px;font-weight:700">1.2 Installation Help</p>
+            <ul style="list-style-type:none">
+                <li><b>1.2.1 Install Microsoft .NET Framework(Offline Installation)</b></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <ol type="1">
+                                <li>Open MCE;</li>
+                                <li>Enter <b>Settings - Support Lib</b> ;</li>
+                                <li>Click the <b>Install .NET Framework 4.7.2</b> button to install;</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>1.2.2 Install Microsoft.ACE.OLEDB.12.0(Offline Installation)</b></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <ol type="1">
+                                <li>If it's the first time to run MCE , a window will pop up to install Microsoft.ACE.OLEDB.12.0 support library, direct installation is enough;</li>
+                                <li>If it isn't the first time to run MCE, Open MCE ;</li>
+                                <li>Enter <b>Settings - Support Lib</b> ;</li>
+                                <li>Depending on the system type of your computer, Click the <b>Install AccessDatabaseEngine</b> or <b>Install AccessDatabaseEngine_X64</b> button, select 32 bit or 64 bit support libraries for installation.</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>1.2.3 Install Microsoft .NET Framework(Online Installation)</b></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <ol type="1">
+                                <li>Visit Microsoft .NET server official website(<a href="https://dotnet.microsoft.com" target="_blank">dotnet.microsoft.com</a>);</li>
+                                <li>Click the <b>Download</b> ;</li>
+                                <li>Select the appropriate version and language to download.</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p style="font-size:24px;font-weight:700">II、Errors Solution</p>
+            <p style="font-size:20px;font-weight:700">2.1 Support Library Class Errors</p>
+            <ul style="list-style-type:none">
+                <li><span style="font-weight:700">2.1.1 Program components exception due to missing function 'System.Reflection.MethodInfo.CreateDelegate'</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li><span>Error Code:</span></li>
+                        <li class="panel">Unhandled exception has occurred in a component in your application. If you click Continue, the application will ignore this error and attempt to continue.<br /><br />Method not found: 'System Delegate System.Reflection.MethodInfo.CreateDelegate(System.Type)'</li>
+                        <li><span>Solution:</span></li>
+                        <li><span>Try using .NET Framework 4.5 or later, recommend using .NET Framework 4.6.1 or later.</span></li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.1.2 Program exception due to support library 'Microsoft.ACE.OLEDB.12.0' not registered on computer</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li><span>Error Code:</span></li>
+                        <li class="panel">Unhandled exception has occurred in your application. If you click Continue, the application will ignore this error and attempt to continue. If you click Quit, the application will close immediately.<br /><br />The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.</li>
+                        <li><span>Solution:</span></li>
+                        <li><span>To reinstall AccessDatabaseEngine or AccessDatabaseEngine_64X ,you can enter 'Settings - Support Lib' to reinstall.</span></li>
+                    </ul>
+                </li>
+            </ul>
+            <p style="font-size:20px;font-weight:700">1.2 Operational Class Error</p>
+            <ul style="list-style-type:none">
+                <li><span style="font-weight:700">2.2.1 Error: GiveItems0001</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>Check if you have selected the player.</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.2 Error: GiveItems0002</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>Check if you have filled in the player ID.</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.3 Error: GiveItems0003</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>Check if you have selected the category.</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.4 Error: GiveItems0004</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>Check if you have selected the item.</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.5 Error: GiveItems0005</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>Check if you have selected the item.</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.6 Error: StatusEffect0001</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>Check if you have selected the player.</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.7 Error: StatusEffect0002</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>Check if you have filled in the player ID.</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.8 Error: StatusEffect0003</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>Check if you have selected the status effect.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--引入 bottom.html-->
+    <div style="padding:20px">
+        <hr />
+        <p>Contact IkaroInory:</p>
+        <ul style="list-style-type:disc">
+            <li>MCBBS：<a href="http://www.mcbbs.net/?1797499" target="_blank">@IkaroInory</a>&nbsp;&nbsp;&nbsp;<a href="http://www.mcbbs.net/thread-802231-1-1.html" target="_blank">MCBBS Post</a></li>
+            <li>Weibo：<a href="http://weibo.com/ikaroinory" target="_blank">@IkaroInory</a></li>
+            <li>bilibili：<a href="http://space.bilibili.com/19875307" target="_blank">白染いり</a></li>
+            <li>AFDian：<a href="https://afdian.net/@ikaroinory" target="_blank">白染染染子</a></li>
+        </ul>
+
+        <div style="text-align:center;font-size:12px">
+            <span>Minecraft Command Editor Wiki, en-us</span>
+            <div id="nowTime"></div>
+        </div>
+    </div>
+</body>
+</html>

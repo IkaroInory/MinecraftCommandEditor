@@ -1,0 +1,163 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../../img/wiki icon.png">
+    <title>Minecraft Command Editor Wiki</title>
+    <meta name="description" content="Minecraft Command Editor Wiki">
+    <meta name="author" content="IkaroInory">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/foundation.min.css">
+    <link rel="stylesheet" href="../../css/foundation-icons.css" />
+    <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/foundation.min.js"></script>
+    <script type="text/javascript" src="../../js/modernizr.js"></script>
+    <script type="text/javascript" src="../../js/nowTime.js"></script>
+</head>
+
+<body onload="showTime()">
+    <!-- 初始化 Foundation JS -->
+    <script>
+        $(document).ready(function () {
+            $(document).foundation();
+        })
+    </script>
+
+    <div class="fixed">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="">Minecraft Command Editor Wiki</a></h1>
+                </li>
+                <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
+                如果需要只显示图片，可以删除 "Menu" 文本 -->
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+
+            <!--顶部导航菜单-->
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li class="active" data-magellan-arrival="home"><a id="home" href="#"><i class="fi-home"></i>&nbsp;Home</a></li>
+                    <li data-magellan-arrival="guide"><a id="guide" href="#"><i class="fi-flag"></i>&nbsp;Guide</a></li>
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="giveitems"><a id="giveitems" href="#">Give Items</a></li>
+                    <li data-magellan-arrival="statuseffect"><a id="statuseffect" href="#">Status Effect</a></li>
+                </ul>
+                <ul class="right">
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="lang" class="has-dropdown">
+                        <a href=""><i class="fa fa-globe"></i>&nbsp;Language</a>
+                        <ul class="dropdown">
+                            <li data-magellan-arrival="zh-cn"><a id="zh-cn" href="#">简体中文</a></li>
+                            <li data-magellan-arrival="zh-tw"><a id="zh-tw" href="#">繁體中文</a></li>
+                            <li class="active" data-magellan-arrival="en-us"><a id="en-us" href="#">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+
+    <!--导航链接-->
+    <script language="javascript" type="text/javascript">
+        document.getElementById("home").onclick = function () {
+            window.location.href = "wiki.html";
+        }
+        document.getElementById("guide").onclick = function () {
+            window.location.href = "wiki-guide.html";
+        }
+        document.getElementById("giveitems").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+        document.getElementById("statuseffect").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+
+        document.getElementById("zh-cn").onclick = function () {
+            window.location.href = "../zh-cn/wiki.html";
+        }
+        document.getElementById("zh-tw").onclick = function () {
+            window.location.href = "../zh-tw/wiki.html";
+        }
+        document.getElementById("en-us").onclick = function () {
+            window.location.href = "../en-us/wiki.html";
+        }
+    </script>
+
+    <div style="padding:20px">
+        <p style="font-size:32px;font-weight:700">Minecraft Command Editor Wiki</p>
+        <span>Welcome to Minecraft Command Editor Wiki, All information related to Minecraft Command Editor will be provided here. If you are interested, welcome to join AFDT in editing Minecraft Command Editor Wiki.</span>
+        <hr />
+        <p style="font-size:24px;font-weight:700">About Minecraft Command Editor</p>
+        <div>
+            <span>Minecraft Command Editor is a software dedicated to advanced editing of Minecraft commands, wrote by IkaroInory who establish the AirField Development Team. At present, it is still updating. More functions will be introduced one after another. Please look forward to it.</span><br />
+            <span>It is said that IkaroInory will also make tools for server plugin commands......That's amazing 23333~&nbsp;&nbsp;&nbsp;_(:з」∠)_</span>
+        </div>
+        <hr />
+        <p style="font-size:24px;font-weight:700">Download</p>
+        <div>
+            <span>If you want to learn more information about Minecraft Command Editor, please visit: <a href="http://www.mcbbs.net/thread-802231-1-1.html" target="_blank">www.mcbbs.net</a></span>
+        </div>
+        <hr />
+        <p style="font-size:24px;font-weight:700">Update Log</p>
+        <div>
+            <span style="font-size:20px">Minecraft Command Editor 2.0.1</span>
+            <ul>
+                <li>Give Items.accdb has been entered;</li>
+                <li>Added help button to the 'Give Items' page;</li>
+                <li>Added Minecraft Command Editor Wiki;</li>
+                <li>Deleted the 'Install MCELib.exe' button from the 'Settings - Support Lib' page;</li>
+                <li>Deleted the 'MCELib.version' key from the version.config;</li>
+                <li>Repaired no pop-up MessageBox that reminder register Microsoft.ACE.OLEDB.12.0 at the first boot;</li>
+                <li>Repaired Global Config.config;</li>
+                <li>Repaired program initialization function code;</li>
+                <li>Corrected lang files;</li>
+                <li>Corrected update log.</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 2.0.0</span>
+            <ul>
+                <li>Complete migration of all code from c# based on Microsoft .Net Framework;</li>
+                <li>Use Microsoft Office Access to store data, most of the data migration has been completed, the original database will no longer be reserved for users;</li>
+                <li>Added logo animation and loading tips in the 'Loading' page;</li>
+                <li>Added 'Settings' page;</li>
+                <li>Added multi-language function;</li>
+                <li>Added error message pop-up;</li>
+                <li>Added enchantment level limit, the scope is [-32768, 32767] (Thanks for @风扇滑翔翼 's offer);</li>
+                <li>Added \tools folder, with Minecraft Command Editor auxiliary tools;</li>
+                <li>Support lore multi-color(Thanks for @荧光谷主 's offer);</li>
+                <li>Modify the layout of 'Home' page;</li>
+                <li>Modify the layout of 'Give Items' and 'Status Effect' page, and integrate functionality for MC1.12.2- and MC1.13+ ;</li>
+                <li>Modify the Toast tip to the message box that used System.Windows.Forms.MessageBox.Show() function;</li>
+                <li>Modify the text layout of the update log;</li>
+                <li>Deleted the 'Give Skulls' page;</li>
+                <li>Deleted MCELib.exe;</li>
+                <li>Deleted stringManipulation.dll;</li>
+                <li>Optimizing Start-up Speed;</li>
+                <li>Repaired Minimizing windows be restored cause flashback;</li>
+                <li>Repaired Minimizing 'Search' window have a blank title;</li>
+                <li>Repair Antivirus Software Malicious Reporting.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--引入 bottom.html-->
+    <div style="padding:20px">
+        <hr />
+        <p>Contact IkaroInory:</p>
+        <ul style="list-style-type:disc">
+            <li>MCBBS：<a href="http://www.mcbbs.net/?1797499" target="_blank">@IkaroInory</a>&nbsp;&nbsp;&nbsp;<a href="http://www.mcbbs.net/thread-802231-1-1.html" target="_blank">MCBBS Post</a></li>
+            <li>Weibo：<a href="http://weibo.com/ikaroinory" target="_blank">@IkaroInory</a></li>
+            <li>bilibili：<a href="http://space.bilibili.com/19875307" target="_blank">白染いり</a></li>
+            <li>AFDian：<a href="https://afdian.net/@ikaroinory" target="_blank">白染染染子</a></li>
+        </ul>
+
+        <div style="text-align:center;font-size:12px">
+            <span>Minecraft Command Editor Wiki, en-us</span>
+            <div id="nowTime"></div>
+        </div>
+    </div>
+</body>
+</html>

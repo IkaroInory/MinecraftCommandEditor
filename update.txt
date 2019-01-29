@@ -1,0 +1,40 @@
+Minecraft Command Editor 2.0.2 - 2019.1
+· Minecraft Command Editor Wiki 可以在线访问；
+· 更新 Minecraft Command Editor Wiki ；
+· 删除 \ttf 文件夹；
+· 修正 Minecraft Command Editor Wiki 中的错别字；
+· 修正更新记录。
+
+Minecraft Command Editor 2.0.1 - 2019.1.21 14:55
+· 物品获取数据库 Give Items.accdb 已全部录入完毕；
+· 新增 '物品获取' 页面帮助按钮；
+· 新增 Minecraft Command Editor Wiki ；
+· 删除 '设置 - 支持库' 页面中的 '安装MCELib.exe' 按钮；
+· 删除 version.config 中的 'MCELib.version' 键；
+· 修复第一次启动未弹出提醒注册 Microsoft.ACE.OLEDB.12.0 支持库的 MessageBox 的 bug ；
+· 修复 Global Config.config 初始化源文件；
+· 修复程序初始化函数代码；
+· 修正语言文件；
+· 修正更新记录。
+
+Minecraft Command Editor 2.0.0 - 2019.1.14 16:50
+· 使用 c# 以 Microsoft .Net Framework 为框架成功实现 MCE 全部代码的迁移；
+· 使用 Microsoft Office Access 数据库进行数据储存，目前已完成大部分的数据迁移，原数据库将不再为用户保留；
+· 新增 '加载' 页面 logo 动画及加载提示；
+· 新增 '设置' 页面，可以在此进行语言的修改及相关支持库的安装；
+· 新增多语言设置，可在 '设置 - 通用' 中切换语言；
+· 新增指令生成失败后可弹出错误信息，以便用户进行排错；
+· 新增附魔等级限制，附魔等级范围为 [-32768, 32767]（感谢 @风扇滑翔翼 提供建议）；
+· 支持 lore 多颜色，只需在需要插入颜色代码的地方插入即可（感谢 @荧光谷主 提供建议）；
+· 新增 \tools 文件夹，内含 Minecraft Command Editor 辅助工具，请不要删除，以便不时之需；
+· 修改 '主页面' 页面布局；
+· 修改 '物品获取' 与 '状态效果' 页面布局，并将适用于 MC1.12.2- 和 MC1.13+ 的功能整合到一个页面；
+· 将复制成功的 Toast 悬浮提示标签修改为使用 System.Windows.Forms.MessageBox.Show() 函数弹出信息窗口；
+· 修改 '更新记录' 文字布局，保留了原更新记录(update-old.txt)；
+· 删除 '头颅获取' 页面，待后续添加；
+· 删除 MCELib.exe , 待后续添加；
+· 删除 stringManipulation.dll ；
+· 优化启动速度；
+· 修复窗口最小化无法恢复而导致的闪退；
+· 修复在任务栏中预览 '检索' 窗口时无法正确显示标题；
+· 修复由于开发语言而导致的软件报毒的问题。

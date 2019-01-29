@@ -1,0 +1,299 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../../img/wiki icon.png" />
+    <title>Minecraft Command Editor Wiki</title>
+    <meta name="description" content="Minecraft Command Editor Wiki">
+    <meta name="author" content="IkaroInory">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/foundation.min.css" />
+    <link rel="stylesheet" href="../../css/foundation-icons.css" />
+    <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/foundation.min.js"></script>
+    <script type="text/javascript" src="../../js/modernizr.js"></script>
+    <script type="text/javascript" src="../../js/nowTime.js"></script>
+</head>
+
+<body onload="showTime()">
+    <!-- 初始化 Foundation JS -->
+    <script>
+        $(document).ready(function () {
+            $(document).foundation();
+        })
+    </script>
+
+    <div class="fixed">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="">Minecraft Command Editor Wiki</a></h1>
+                </li>
+                <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
+                如果需要只显示图片，可以删除 "Menu" 文本 -->
+                <li class="toggle-topbar menu-icon"><a href=""><span>菜单</span></a></li>
+            </ul>
+
+            <!--顶部导航菜单-->
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li class="active" data-magellan-arrival="home"><a id="home" href="#"><i class="fi-home"></i>&nbsp;首页</a></li>
+                    <li data-magellan-arrival="guide"><a id="guide" href="#"><i class="fi-flag"></i>&nbsp;使用指南</a></li>
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="giveitems"><a id="giveitems" href="#">物品获取</a></li>
+                    <li data-magellan-arrival="statuseffect"><a id="statuseffect" href="#">状态效果</a></li>
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="about"><a id="about" href="#"><i class="fa fa-code"></i>&nbsp;关于</a></li>
+
+                </ul>
+                <ul class="right">
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="lang" class="has-dropdown">
+                        <a href=""><i class="fa fa-globe"></i>&nbsp;语言</a>
+                        <ul class="dropdown">
+                            <li class="active" data-magellan-arrival="zh-cn"><a id="zh-cn" href="#">简体中文</a></li>
+                            <li data-magellan-arrival="zh-tw"><a id="zh-tw" href="#">繁體中文</a></li>
+                            <li data-magellan-arrival="en-us"><a id="en-us" href="#">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+
+    <!--导航链接-->
+    <script language="javascript" type="text/javascript">
+        document.getElementById("home").onclick = function () {
+            window.location.href = "wiki.html";
+        }
+        document.getElementById("guide").onclick = function () {
+            window.location.href = "wiki-guide.html";
+        }
+        document.getElementById("giveitems").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+        document.getElementById("statuseffect").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+        document.getElementById("about").onclick = function () {
+            window.location.href = "wiki-about.html";
+        }
+
+        document.getElementById("zh-cn").onclick = function () {
+            window.location.href = "../zh-cn/wiki.html";
+        }
+        document.getElementById("zh-tw").onclick = function () {
+            window.location.href = "../zh-tw/wiki.html";
+        }
+        document.getElementById("en-us").onclick = function () {
+            window.location.href = "../en-us/wiki.html";
+        }
+    </script>
+
+    <div style="padding:20px">
+        <p style="font-size:32px;font-weight:700">Minecraft Command Editor Wiki</p>
+        <span>欢迎来到 Minecraft Command Editor Wiki ，这里将提供一切与 Minecraft Command Editor 有关的信息。如果你感兴趣，欢迎加入 AFDT 团队与我们一同编辑 Minecraft Command Editor Wiki 。</span>
+        <hr />
+        <p style="font-size:24px;font-weight:700">软件介绍</p>
+        <div>
+            <span>Minecraft Command Editor 是一款致力于 Minecraft 指令高级编辑的软件，由 AirField Development Team 创始人 白染(IkaroInory)编写。目前仍在持续更新，将不断有更多的功能陆续推出，尽请期待吧！</span><br />
+            <span>据说白染子还要制作关于服务器插件指令的小工具......这可真是世风日下23333~&nbsp;&nbsp;&nbsp;_(:з」∠)_</span>
+        </div>
+        <hr />
+        <p style="font-size:24px;font-weight:700">软件下载</p>
+        <div>
+            <span>想了解更多关于 Minecraft Command Editor 的信息吗？请访问：<a href="http://www.mcbbs.net/thread-802231-1-1.html" target="_blank">www.mcbbs.net</a></span>
+        </div>
+        <hr />
+        <p style="font-size:24px;font-weight:700">更新记录</p>
+        <div>
+            <span style="font-size:20px">Minecraft Command Editor 2.0.1</span>
+            <ul>
+                <li>物品获取数据库 Give Items.accdb 已全部录入完毕；</li>
+                <li>新增 '物品获取' 页面帮助按钮；</li>
+                <li>新增 Minecraft Command Editor Wiki ；</li>
+                <li>删除 '设置 - 支持库' 页面中的 '安装MCELib.exe' 按钮；</li>
+                <li>删除 version.config 中的 'MCELib.version' 键；</li>
+                <li>修复第一次启动未弹出提醒注册 Microsoft.ACE.OLEDB.12.0 支持库的 MessageBox 的 bug ；</li>
+                <li>修复 Global Config.config 初始化源文件；</li>
+                <li>修复程序初始化函数代码；</li>
+                <li>修正语言文件；</li>
+                <li>修正更新记录。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 2.0.0</span>
+            <ul>
+                <li>使用 c# 以 Microsoft .Net Framework 为框架成功实现 MCE 全部代码的迁移；</li>
+                <li>使用 Microsoft Office Access 数据库进行数据储存，目前已完成大部分的数据迁移，原数据库将不再为用户保留；</li>
+                <li>新增 '加载' 页面 logo 动画及加载提示；</li>
+                <li>新增 '设置' 页面，可以在此进行语言的修改及相关支持库的安装；</li>
+                <li>新增多语言设置，可在 '设置 - 通用' 中切换语言；</li>
+                <li>新增指令生成失败后可弹出错误信息，以便用户进行排错；</li>
+                <li>新增附魔等级限制，附魔等级范围为 [-32768, 32767]（感谢 @风扇滑翔翼 提供建议）；</li>
+                <li>新增 \tools 文件夹，内含 Minecraft Command Editor 辅助工具，请不要删除，以便不时之需；</li>
+                <li>支持 lore 多颜色，只需在需要插入颜色代码的地方插入即可（感谢 @荧光谷主 提供建议）；</li>
+                <li>修改 '主页面' 页面布局；</li>
+                <li>修改 '物品获取' 与 '状态效果' 页面布局，并将适用于 MC1.12.2- 和 MC1.13+ 的功能整合到一个页面；</li>
+                <li>将复制成功的 Toast 悬浮提示标签修改为使用 System.Windows.Forms.MessageBox.Show() 函数弹出信息窗口；</li>
+                <li>修改 '更新记录' 文字布局，保留了原更新记录(update-old.txt)；</li>
+                <li>删除 '头颅获取' 页面，待后续添加；</li>
+                <li>删除 MCELib.exe , 待后续添加；</li>
+                <li>删除 stringManipulation.dll ；</li>
+                <li>优化启动速度；</li>
+                <li>修复窗口最小化无法恢复而导致的闪退；</li>
+                <li>修复在任务栏中预览 '检索' 窗口时无法正确显示标题；</li>
+                <li>修复由于开发语言而导致的软件报毒的问题。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.3.7.1013_beta</span>
+            <ul>
+                <li>'MC1.13物品获取' 页面所有功能均可使用；</li>
+                <li>调整了提示信息持续的时间；</li>
+                <li>修复了 'MC1.13物品获取' 中 '帮助' 按钮的 bug ；</li>
+                <li>修复了 'MC1.13物品获取' 中 '复制' 按钮的 bug 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.3.6.908_beta</span>
+            <ul>
+                <li>添加了 analysis 模块，版本：1.1.8.19 ；</li>
+                <li>添加了 'MC1.13物品获取'  页面，当前正在测试中；</li>
+                <li>添加了 '头颅获取' 页面；</li>
+                <li>删除了 \config\MCELib-ver.yml 文件；</li>
+                <li>调整了主页面布局；</li>
+                <li>修复了 '物品获取' 中部分错别字。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.3.5.808_beta</span>
+            <ul>
+                <li>在 '物品获取' 中添加了 '其他' 种类；</li>
+                <li>在 '物品获取' 中添加了 '信息隐藏' 功能；</li>
+                <li>更新 MCELib, 当前版本：1.1.1.808 ；</li>
+                <li>调整 '物品获取' 页面布局；</li>
+                <li>调整 '关于 MCE' 页面；</li>
+                <li>修改 updata.txt 中的部分细节；</li>
+                <li>修复了 '物品获取' 中属性数值异常的 bug 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.3.4.807_beta</span>
+            <ul>
+                <li>添加了 '历史记录' 板块，可以随时查阅自己所生成的代码；</li>
+                <li>修复了 MCELib 版本号错误的 bug ；</li>
+                <li>修复了作者名字显示（原因：作者改名了2333）。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.3.3.805_beta</span>
+            <ul>
+                <li>在 '物品获取' 中添加了 '无法破坏' 标签；</li>
+                <li>修改附魔组标签代码；</li>
+                <li>修改属性组标签代码；</li>
+                <li>修复创建的快捷方式无法打开的 bug 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.3.2.803_beta</span>
+            <ul>
+                <li>修复无法打开软件的 bug 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.3.1.802_beta</span>
+            <ul>
+                <li>修复 '物品获取' 中物品名称及 Lore 无法加入颜色代码的 bug ；</li>
+                <li>修复软件恶意报毒的 bug ；</li>
+                <li>修复版本号 bug 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.3.0.802_beta</span>
+            <ul>
+                <li>升级到 beta 版！</li>
+                <li>重新绘制软件视图布局；</li>
+                <li>采用全新代码书写格式，将软件全部重写；</li>
+                <li>将 'MCELib' 升级至 1.1.0.801 版本；</li>
+                <li>将 '微软雅黑' 字体升级至 6.25 版本；</li>
+                <li>将所有效果代码导入数据库；</li>
+                <li>修复 '状态效果' 中效果id读取错误的 bug 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.2.3.726_alpha</span>
+            <ul>
+                <li>添加了属性修改中部位选择和数值百分比的修改；</li>
+                <li>添加了 '状态效果' 页面；</li>
+                <li>删除了 id 文件夹，为下一版本更新做准备。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.2.2.724_alpha</span>
+            <ul>
+                <li>全面支持 Minecraft 1.12 版本！</li>
+                <li>添加了 '物品获取' 标签页的属性模块，现生成物品支持属性修改；</li>
+                <li>解除了对物品名称颜色选择的禁止，添加了对 Lore 的颜色选择；</li>
+                <li>对 '添加 MCE 到桌面' 添加了提示信息；</li>
+                <li>在 '关于MCE' 页面中添加内容；</li>
+                <li>添加了组件悬浮提示；</li>
+                <li>添加帮助按钮；</li>
+                <li>更新 MCELib 数据库；</li>
+                <li>调整了提示信息的显示时间；</li>
+                <li>对 '关于MCE' 标签页进行排版；</li>
+                <li>简化写入部分代码；</li>
+                <li>修复了部分组件字体错误的 bug ；</li>
+                <li>修复了上一版本中创建快捷方式的 bug 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.2.1.721_alpha</span>
+            <ul>
+                <li>修复了主窗口及查看指令窗口控制按钮的 bug ；</li>
+                <li>修复了 '物品获取' 页面中字体加粗的 bug ；</li>
+                <li>在 '关于MCE' 页面中添加了'将 'MCE 添加到桌面' 的快捷方式；</li>
+                <li>调整了 '物品获取' 页面中标签的位置；</li>
+                <li>修复了上一版本的版本号 bug 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.2.0.720_alpha</span>
+            <ul>
+                <li>将物品 id 及 data 写入数据库；</li>
+                <li>正式使用数据库作为储存容器，并保留了 \id 文件夹下的所有信息文件；</li>
+                <li>添加了 MCELib 数据库终端，当前版本：1.0.0.720 ；</li>
+                <li>导入 RepairofDamagedDocuments.dll 动态链接库，当前版本：1.0.1.718 ；</li>
+                <li>设置了按下 Esc 键窗口不关闭属性；</li>
+                <li>对 '关于MCE' 页面进行排版；</li>
+                <li>添加了隐藏的资源载入窗口；</li>
+                <li>对提示信息进行组件化；</li>
+                <li>添加了自动修复版本号文件功能；</li>
+                <li>即将支持 Minecraft 1.12 。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.1.0.707_alpha</span>
+            <ul>
+                <li>成功添加所有可选物品类别；</li>
+                <li>调整了主窗口排布，取消了指令预览框；</li>
+                <li>添加查看指令功能，在此可以对已生成的指令进行更改；</li>
+                <li>预设了物品属性功能，下一大版本欲添加；</li>
+                <li>内置了 idb 数据库储存文件，下一大版本欲添加；</li>
+                <li>对 '关于' 页面进行简单重置；</li>
+                <li>对历史更新记录文档进行 bug 语句修复。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.0.1.701_base</span>
+            <ul>
+                <li>添加战斗用品；</li>
+                <li>添加食物类别、工具类别物品 id 文件；</li>
+                <li>取消工具类别、战斗用品类别中 25 个附魔书项目；</li>
+                <li>将主窗口改为固定边框型窗口；</li>
+                <li>修复了第二次点击物品类别组合框会重置选中物品的 bug ；</li>
+                <li>修复了更改物品类别不重置物品 id 显示的 bug ；</li>
+                <li>修复了版本号加载错误的问题。</li>
+            </ul>
+            <span style="font-size:20px">Minecraft Command Editor 1.0.0.630_base</span>
+            <ul>
+                <li>MCBBS 首发！</li>
+                <li>Minecraft Command Editor 的第一个（测试）版本；</li>
+                <li>完成了基本框架及少部分功能，物品类更新到 Minecraft 1.8.9 对应，大部分物品 id 暂未写入；</li>
+                <li>暂不支持物品自定义名称及 lore 的颜色编辑功能；</li>
+                <li>当前版本未写入初始化代码。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--引入 bottom.html-->
+    <div style="padding:20px">
+        <hr />
+        <p>联系白染：</p>
+        <ul style="list-style-type:disc">
+            <li>MCBBS：<a href="http://www.mcbbs.net/?1797499" target="_blank">@IkaroInory</a>&nbsp;&nbsp;&nbsp;<a href="http://www.mcbbs.net/thread-802231-1-1.html" target="_blank">MCBBS首发贴</a></li>
+            <li>Weibo：<a href="http://weibo.com/ikaroinory" target="_blank">@IkaroInory</a></li>
+            <li>bilibili：<a href="http://space.bilibili.com/19875307" target="_blank">白染いり</a></li>
+            <li>AFDian：<a href="https://afdian.net/@ikaroinory" target="_blank">白染染染子</a></li>
+        </ul>
+
+        <div style="text-align:center;font-size:12px">
+            <span>Minecraft Command Editor Wiki, zh_cn</span>
+            <div id="nowTime"></div>
+        </div>
+    </div>
+</body>
+</html>

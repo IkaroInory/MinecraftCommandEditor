@@ -1,0 +1,163 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../../img/wiki icon.png" />
+    <title>关于 - Minecraft Command Editor Wiki</title>
+    <meta name="description" content="Minecraft Command Editor Wiki">
+    <meta name="author" content="IkaroInory">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/foundation.min.css" />
+    <link rel="stylesheet" href="../../css/foundation-icons.css" />
+    <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/foundation.min.js"></script>
+    <script type="text/javascript" src="../../js/modernizr.js"></script>
+    <script type="text/javascript" src="../../js/nowTime.js"></script>
+</head>
+
+<body onload="showTime()">
+    <!-- 初始化 Foundation JS -->
+    <script>
+        $(document).ready(function () {
+            $(document).foundation();
+        })
+    </script>
+
+    <div class="fixed">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="">Minecraft Command Editor Wiki</a></h1>
+                </li>
+                <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
+                如果需要只显示图片，可以删除 "Menu" 文本 -->
+                <li class="toggle-topbar menu-icon"><a href=""><span>菜单</span></a></li>
+            </ul>
+
+            <!--顶部导航菜单-->
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li data-magellan-arrival="home"><a id="home" href="#"><i class="fi-home"></i>&nbsp;首页</a></li>
+                    <li data-magellan-arrival="guide"><a id="guide" href="#"><i class="fi-flag"></i>&nbsp;使用指南</a></li>
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="giveitems"><a id="giveitems" href="#">物品获取</a></li>
+                    <li data-magellan-arrival="statuseffect"><a id="statuseffect" href="#">状态效果</a></li>
+                    <li class="divider"></li>
+                    <li class="active" data-magellan-arrival="about"><a id="about" href="#"><i class="fa fa-code"></i>&nbsp;关于</a></li>
+
+                </ul>
+                <ul class="right">
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="lang" class="has-dropdown">
+                        <a href=""><i class="fa fa-globe"></i>&nbsp;语言</a>
+                        <ul class="dropdown">
+                            <li class="active" data-magellan-arrival="zh-cn"><a id="zh-cn" href="#">简体中文</a></li>
+                            <li data-magellan-arrival="zh-tw"><a id="zh-tw" href="#">繁體中文</a></li>
+                            <li data-magellan-arrival="en-us"><a id="en-us" href="#">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+
+    <!--导航链接-->
+    <script language="javascript" type="text/javascript">
+        document.getElementById("home").onclick = function () {
+            window.location.href = "wiki.html";
+        }
+        document.getElementById("guide").onclick = function () {
+            window.location.href = "wiki-guide.html";
+        }
+        document.getElementById("giveitems").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+        document.getElementById("statuseffect").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+        document.getElementById("about").onclick = function () {
+            window.location.href = "wiki-about.html";
+        }
+
+        document.getElementById("zh-cn").onclick = function () {
+            window.location.href = "../zh-cn/wiki.html";
+        }
+        document.getElementById("zh-tw").onclick = function () {
+            window.location.href = "../zh-tw/wiki.html";
+        }
+        document.getElementById("en-us").onclick = function () {
+            window.location.href = "../en-us/wiki.html";
+        }
+    </script>
+
+    <div style="padding:20px">
+        <!--标题-->
+        <div>
+            <p style="font-size:32px;font-weight:700">关于 - Minecraft Command Editor Wiki</p>
+            <span>感谢您使用 Minecraft Command Editor 及 Minecraft Command Editor Wiki ，您的每一次访问都是对白染的鼓励与支持！</span>
+        </div>
+        <hr />
+        <!--关于 Minecraft Command Editor-->
+        <div>
+            <p style="font-size:24px;font-weight:700">关于 Minecraft Command Editor</p>
+            <ul style="list-style-type:disc">
+                <li>软件名称：Minecraft Command Editor</li>
+                <li>作者：白染（IkaroInory）</li>
+                <li>当前版本：2.0.2</li>
+                <li>适用版本：1.6 - 1.13.2</li>
+                <li>首次发行日期：2018.6.30</li>
+                <li>最后更新日期：2019.1.28</li>
+                <li>编写语言：c# from .NET Framework</li>
+                <li>语言支持：简体中文 繁體/正體中文 English</li>
+            </ul>
+            <span>感谢使用过 MCE 的每一个人，感谢提交 bug 或提供建议的每一个人，因为有你，MCE 才会越来越棒！</span>
+        </div>
+        <hr />
+        <!--关于 Minecraft Command Editor Wiki-->
+        <div>
+            <p style="font-size:24px;font-weight:700">关于 Minecraft Command Editor Wiki</p>
+            <ul style="list-style-type:disc">
+                <li>作者：白染（IkaroInory）</li>
+                <li>编写语言：HTML、JavaScript</li>
+                <li>语言支持：简体中文 繁體/正體中文 English</li>
+            </ul>
+        </div>
+        <hr />
+        <!--关于 IkaroInory-->
+        <div>
+            <p style="font-size:24px;font-weight:700">关于 IkaroInory</p>
+            <ul>
+                <li>姓名：白染</li>
+                <li>英文名：IkaroInory</li>
+                <li>性别：不详</li>
+                <li>年龄：上古之神</li>
+                <li>职业：学生狗、AFDT 创始人、程序猿、海上钢琴师、唱见、欧皇</li>
+                <li>爱好：音乐、绘画、体育、计算机</li>
+
+                <li>坐标：天琴座α</li>
+            </ul>
+        </div>
+        <hr />
+    </div>
+
+    <!--页脚-->
+    <div style="padding:20px">
+        <hr />
+        <p>联系白染：</p>
+        <ul style="list-style-type:disc">
+            <li>MCBBS：<a href="http://www.mcbbs.net/?1797499" target="_blank">@IkaroInory</a>&nbsp;&nbsp;&nbsp;<a href="http://www.mcbbs.net/thread-802231-1-1.html" target="_blank">MCBBS首发贴</a></li>
+            <li>Weibo：<a href="http://weibo.com/ikaroinory" target="_blank">@IkaroInory</a></li>
+            <li>bilibili：<a href="http://space.bilibili.com/19875307" target="_blank">白染いり</a></li>
+            <li>AFDian：<a href="https://afdian.net/@ikaroinory" target="_blank">白染染染子</a></li>
+        </ul>
+
+        <div style="text-align:center;font-size:12px">
+            <span>Minecraft Command Editor Wiki, zh_cn</span>
+            <div id="nowTime"></div>
+        </div>
+    </div>
+</body>
+</html>

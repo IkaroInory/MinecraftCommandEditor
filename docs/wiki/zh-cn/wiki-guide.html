@@ -1,0 +1,247 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../../img/wiki icon.png">
+    <title>使用指南 - Minecraft Command Editor Wiki</title>
+    <meta name="description" content="Minecraft Command Editor Wiki">
+    <meta name="author" content="IkaroInory">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/foundation.min.css">
+    <link rel="stylesheet" href="../../css/foundation-icons.css" />
+    <link rel="stylesheet" href="../../css/font-awesome.min.css" />
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/foundation.min.js"></script>
+    <script type="text/javascript" src="../../js/modernizr.js"></script>
+    <script type="text/javascript" src="../../js/nowTime.js"></script>
+</head>
+
+<body onload="showTime()">
+    <!-- 初始化 Foundation JS -->
+    <script>
+        $(document).ready(function () {
+            $(document).foundation();
+        })
+    </script>
+
+    <div class="fixed">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="">Minecraft Command Editor Wiki</a></h1>
+                </li>
+                <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
+                如果需要只显示图片，可以删除 "Menu" 文本 -->
+                <li class="toggle-topbar menu-icon"><a href=""><span>菜单</span></a></li>
+            </ul>
+
+            <!--顶部导航菜单-->
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li data-magellan-arrival="home"><a id="home" href="#"><i class="fi-home"></i>&nbsp;首页</a></li>
+                    <li class="active" data-magellan-arrival="guide"><a id="guide" href="#"><i class="fi-flag"></i>&nbsp;使用指南</a></li>
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="giveitems"><a id="giveitems" href="#">物品获取</a></li>
+                    <li data-magellan-arrival="statuseffect"><a id="statuseffect" href="#">状态效果</a></li>
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="about"><a id="about" href="#"><i class="fa fa-code"></i>&nbsp;关于</a></li>
+                </ul>
+                <ul class="right">
+                    <li class="divider"></li>
+                    <li data-magellan-arrival="lang" class="has-dropdown">
+                        <a href=""><i class="fa fa-globe"></i>&nbsp;语言</a>
+                        <ul class="dropdown">
+                            <li class="active" data-magellan-arrival="zh-cn"><a id="zh-cn" href="#">简体中文</a></li>
+                            <li data-magellan-arrival="zh-tw"><a id="zh-tw" href="#">繁體中文</a></li>
+                            <li data-magellan-arrival="en-us"><a id="en-us" href="#">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+
+    <!--导航链接-->
+    <script language="javascript" type="text/javascript">
+        document.getElementById("home").onclick = function () {
+            window.location.href = "wiki.html";
+        }
+        document.getElementById("guide").onclick = function () {
+            window.location.href = "wiki-guide.html";
+        }
+        document.getElementById("giveitems").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+        document.getElementById("statuseffect").onclick = function () {
+            window.location.href = "wiki-error.html";
+        }
+        document.getElementById("about").onclick = function () {
+            window.location.href = "wiki-about.html";
+        }
+
+        document.getElementById("zh-cn").onclick = function () {
+            window.location.href = "../zh-cn/wiki-guide.html";
+        }
+        document.getElementById("zh-tw").onclick = function () {
+            window.location.href = "../zh-tw/wiki-guide.html";
+        }
+        document.getElementById("en-us").onclick = function () {
+            window.location.href = "../en-us/wiki-guide.html";
+        }
+    </script>
+
+    <div style="padding:20px">
+        <p style="font-size:32px;font-weight:700">使用指南 - Minecraft Command Editor Wiki</p>
+        <hr />
+        <div>
+            <p style="font-size:24px;font-weight:700">一、系统要求</p>
+            <span>请尽可能的在 <b>Windows 10</b> 上使用 Minecraft Command Editor ，以确保 Minecraft Command Editor 能发挥出最大的性能。</span>
+            <p style="font-size:20px;font-weight:700">1.1 支持库</p>
+            <ul style="list-style-type:none">
+                <li><span>当你使用 Minecraft Command Editor 时，你可能需要以下列出的支持库：</span></li>
+                <!--Support Lib List-->
+                <li>
+                    <ul style="list-style-type:disc">
+                        <li>Microsoft .NET Framework 4.6.1 或更高版本</li>
+                        <li>Microsoft.ACE.OLEDB.12.0</li>
+                    </ul>
+                </li>
+                <li><span>请务必检查你的计算机是否安装了以上支持库，若没有安装，请通过 <b>1.2 安装帮助</b> 的引导完成安装。</span></li>
+            </ul>
+            <p style="font-size:20px;font-weight:700">1.2 安装帮助</p>
+            <ul style="list-style-type:none">
+                <li><b>1.2.1 安装 Microsoft .NET Framework（离线安装）</b></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <ol type="1">
+                                <li>打开 MCE ；</li>
+                                <li>进入 <b>设置 - 支持库</b> ；</li>
+                                <li>点击 <b>安装 .NET Framework 4.7.2</b> 按钮即可进行安装。</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>1.2.2 安装 Microsoft.ACE.OLEDB.12.0（离线安装）</b></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <ol type="1">
+                                <li>如果是第一次运行 MCE ，将会弹出安装 Microsoft.ACE.OLEDB.12.0 支持库的窗口，直接安装即可；</li>
+                                <li>如果不是第一次运行，则打开 MCE ；</li>
+                                <li>进入 <b>设置 - 支持库</b> ；</li>
+                                <li>根据你的电脑的系统类型，点击 <b>安装 AccessDatabaseEngine</b> 或 <b>安装 AccessDatabaseEngine_X64</b> 按钮，选择 32 位或 64 位的支持库进行安装。</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>1.2.3 安装 Microsoft .NET Framework（在线安装）</b></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <ol type="1">
+                                <li>登录 Microsoft .NET 服务官网（<a href="https://dotnet.microsoft.com" target="_blank">dotnet.microsoft.com</a>）；</li>
+                                <li>点击 <b>Download</b> ；</li>
+                                <li>选择合适的版本和语言进行下载。</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p style="font-size:24px;font-weight:700">二、错误解决方案</p>
+            <p style="font-size:20px;font-weight:700">2.1 支持库类错误</p>
+            <ul style="list-style-type:none">
+                <li><span style="font-weight:700">2.1.1 由于方法 'System.Reflection.MethodInfo.CreateDelegate' 的缺失而导致程序组件发生异常</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li><span>错误代码：</span></li>
+                        <li class="panel">Unhandled exception has occurred in a component in your application. If you click Continue, the application will ignore this error and attempt to continue.<br /><br />Method not found: 'System Delegate System.Reflection.MethodInfo.CreateDelegate(System.Type)'</li>
+                        <li><span>解决方案：</span></li>
+                        <li><span>尝试使用 .NET Framework 4.5 或更高版本，推荐使用 .NET Framework 4.6.1 或更高版本。</span></li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.1.2 由于支持库 'Microsoft.ACE.OLEDB.12.0' 未在计算机上注册而导致程序发生异常</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li><span>错误代码：</span></li>
+                        <li class="panel">Unhandled exception has occurred in your application. If you click Continue, the application will ignore this error and attempt to continue. If you click Quit, the application will close immediately.<br /><br />The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.</li>
+                        <li><span>解决方案：</span></li>
+                        <li><span>重新安装 AccessDatabaseEngine 或 AccessDatabaseEngine_64X ，可以在 '设置 - 支持库' 中进行安装。</span></li>
+                    </ul>
+                </li>
+            </ul>
+            <p style="font-size:20px;font-weight:700">1.2 操作类错误</p>
+            <ul style="list-style-type:none">
+                <li><span style="font-weight:700">2.2.1 错误代码：GiveItems0001</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>检查是否已选择了要获取物品的玩家。</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.2 错误代码：GiveItems0002</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>检查是否已正确填写了要获取物品的玩家 ID。</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.3 错误代码：GiveItems0003</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>检查是否已选择了要获取的物品类别。</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.4 错误代码：GiveItems0004</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>检查是否已选择了要获取的物品。</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.5 错误代码：GiveItems0005</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>检查是否已选择了要获取的物品。</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.6 错误代码：StatusEffect0001</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>检查是否已选择了要获取状态效果的玩家。</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.7 错误代码：StatusEffect0002</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>检查是否已正确填写了要获取状态效果的玩家 ID。</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight:700">2.2.8 错误代码：StatusEffect0003</span></li>
+                <li>
+                    <ul style="list-style-type:none">
+                        <li>检查是否已选择了要获取的状态效果。</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--引入 bottom.html-->
+    <div style="padding:20px">
+        <hr />
+        <p>联系白染：</p>
+        <ul style="list-style-type:disc">
+            <li>MCBBS：<a href="http://www.mcbbs.net/?1797499" target="_blank">@IkaroInory</a>&nbsp;&nbsp;&nbsp;<a href="http://www.mcbbs.net/thread-802231-1-1.html" target="_blank">MCBBS首发贴</a></li>
+            <li>Weibo：<a href="http://weibo.com/ikaroinory" target="_blank">@IkaroInory</a></li>
+            <li>bilibili：<a href="http://space.bilibili.com/19875307" target="_blank">白染いり</a></li>
+            <li>AFDian：<a href="https://afdian.net/@ikaroinory" target="_blank">白染染染子</a></li>
+        </ul>
+
+        <div style="text-align:center;font-size:12px">
+            <span>Minecraft Command Editor Wiki, zh_cn</span>
+            <div id="nowTime"></div>
+        </div>
+    </div>
+</body>
+</html>
